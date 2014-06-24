@@ -1,0 +1,14 @@
+﻿.dropzone {
+	display: table;
+	margin-bottom: 0;
+	height: 210px;
+	width: 100%;
+
+	&.hover {
+		border-color: $brand-success;
+	}
+	.dropzone-control-wrapper {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}

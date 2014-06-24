@@ -1,0 +1,29 @@
+{
+  "name": "FaceDetectionROSIS",
+  "version": "0.0.1",
+  "main": [
+    "js/main.js",
+    "css/main.css"
+  ],
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.9",
+    "angular": null,
+    "angular-route": "~1.2.1",
+    "angular-resource": null,
+    "angular-file-upload": "~0.5.6",
+	"angular-ui-bootstrap": "~0.11.0",
+    "webcam-directive": null,
+    "requirejs-text": "~2.0.10",
+    "bootstrap": null,
+    "modernizr": null,
+    "jquery": "~2.1.0"
+  },
+  "private": true,
+  "resolutions": {
+    "angular": "1.2.16"
+  }
+}

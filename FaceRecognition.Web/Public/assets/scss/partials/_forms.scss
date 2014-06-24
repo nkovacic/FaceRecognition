@@ -1,0 +1,42 @@
+form {
+	.input-validation-error {
+		border-color: $base-color-red-validation !important;
+
+		& + .nano-validation-error {
+			font-size: 12px;
+			margin-top: 5px;
+		}
+	}
+}
+
+.nano-validation-summary-errors {
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+		}
+	}
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+
+	input[type=file] {
+		position: absolute;
+		top: 0;
+		right: 0;
+		min-width: 100%;
+		min-height: 100%;
+		font-size: 999px;
+		text-align: right;
+		filter: alpha(opacity=0);
+		opacity: 0;
+		outline: none;
+		background: white;
+		cursor: inherit;
+		display: block;
+	}
+}

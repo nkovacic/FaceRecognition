@@ -1,0 +1,715 @@
+/*
+	This CSS was compiled using the Compass SASS framework (http://compass-style.org/).
+	To extend the scss files just just call "compass watch" in a command prompt window, which is pointing to the main project directory.
+	Compiled CSS file is saved in the css directory under the name main.css.
+	
+	For more information about the SASS language please visit http://sass-lang.com/
+*/
+/********* VENDOR *******/
+/********* MODULES *******/
+/********* PARTIALS *******/
+/* line 1, ../scss/partials/_global.scss */
+body {
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  padding-top: 55px;
+}
+
+/* line 7, ../scss/partials/_global.scss */
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* line 12, ../scss/partials/_global.scss */
+.center-app-wrapper {
+  height: 100%;
+}
+/* line 15, ../scss/partials/_global.scss */
+.center-app-wrapper .layout-wrapper {
+  height: 100%;
+}
+
+/* line 67, ../scss/partials/_global.scss */
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 72, ../scss/partials/_global.scss */
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+/* line 77, ../scss/partials/_global.scss */
+.col-lg-2-4 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 1200px) {
+  /* line 77, ../scss/partials/_global.scss */
+  .col-lg-2-4 {
+    float: left;
+    width: 20%;
+  }
+}
+
+/* line 80, ../scss/partials/_global.scss */
+.col-md-2-4 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 992px) {
+  /* line 80, ../scss/partials/_global.scss */
+  .col-md-2-4 {
+    float: left;
+    width: 20%;
+  }
+}
+
+/* line 83, ../scss/partials/_global.scss */
+.col-sm-2-4 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  /* line 83, ../scss/partials/_global.scss */
+  .col-sm-2-4 {
+    float: left;
+    width: 20%;
+  }
+}
+
+/* line 86, ../scss/partials/_global.scss */
+.col-xs-2-4 {
+  position: relative;
+  float: left;
+  width: 20%;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 90, ../scss/partials/_global.scss */
+.selectChartDisplay {
+  position: absolute;
+  top: 105px;
+  right: 5%;
+}
+
+/* line 96, ../scss/partials/_global.scss */
+.selectChartDisplay > div.right {
+  float: right;
+  margin-left: 10px;
+}
+
+/* line 101, ../scss/partials/_global.scss */
+.selectChartDisplay > div.left {
+  float: left;
+}
+
+/* line 105, ../scss/partials/_global.scss */
+.burgundy-title {
+  color: #ca2744;
+  display: table-cell;
+  font-family: gothammedium;
+  font-size: 24px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* line 114, ../scss/partials/_global.scss */
+.full-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/public/assets/img/admin/ajax-loader.gif') no-repeat center white;
+  z-index: 999;
+}
+/* line 123, ../scss/partials/_global.scss */
+.full-loader.big {
+  background: url('/public/assets/img/ajax-loader.gif?1396340462') no-repeat center white;
+}
+
+/* line 128, ../scss/partials/_global.scss */
+.relative {
+  position: relative;
+}
+
+/* line 1, ../scss/partials/_header.scss */
+.navbar-static-top {
+  background: none;
+  border: 0;
+  margin-bottom: 0;
+  z-index: auto;
+}
+/* line 7, ../scss/partials/_header.scss */
+.navbar-static-top .container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+/* line 11, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-top-header {
+  background-color: black;
+  padding: 10px 0;
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  width: 100%;
+}
+/* line 20, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-top-header .top-header-user-wrapper .top-header-user-username {
+  color: #7f7f7f;
+  line-height: 25px;
+}
+/* line 24, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-top-header .top-header-user-wrapper .top-header-user-logout-wrapper {
+  margin-left: 10px;
+}
+/* line 27, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-top-header .top-header-user-wrapper .top-header-user-logout-wrapper .top-header-user-logout {
+  height: 25px;
+}
+/* line 33, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-top-header .top-header-menu-wrapper .top-header-sidebar-button-wrapper {
+  display: table;
+  height: 25px;
+}
+/* line 37, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-top-header .top-header-menu-wrapper .navbar-toggle {
+  border: 0;
+  border-radius: 0;
+  display: table-cell;
+  float: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+/* line 46, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-top-header .top-header-menu-wrapper .navbar-toggle .icon-bar {
+  background-color: #7f7f7f;
+  height: 3px;
+}
+/* line 51, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-top-header .top-header-menu-wrapper .top-header-menu-text {
+  color: #7f7f7f;
+  margin-left: 20px;
+  line-height: 25px;
+}
+/* line 58, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-middle-header {
+  position: relative;
+}
+/* line 61, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-middle-header .middle-star-image-wrapper {
+  position: absolute;
+  margin-top: -40px;
+}
+/* line 65, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-middle-header .middle-star-image-wrapper .middle-star-image {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+  opacity: 0.25;
+  height: 340px;
+  width: 340px;
+}
+/* line 71, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-middle-header .middle-header-on-air-wrapper {
+  padding-right: 0;
+}
+/* line 74, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-middle-header .on-air-person-image-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+}
+/* line 79, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-middle-header .on-air-data-wrapper {
+  background-color: #f0f1f1;
+  margin: 25px 0 20px 0;
+  padding: 10px 15px;
+}
+/* line 84, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-middle-header .on-air-data-wrapper .on-air-live {
+  background-color: #ca2744;
+  color: white;
+  font-family: gothammedium;
+  height: 26px;
+  padding: 3px 5px;
+  text-transform: uppercase;
+}
+/* line 92, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-middle-header .on-air-data-wrapper .on-air-volume-icon-wrapper {
+  margin-left: 15px;
+}
+/* line 95, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-middle-header .on-air-data-wrapper .on-air-volume-icon-wrapper img {
+  height: 26px;
+}
+/* line 99, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-middle-header .on-air-data-wrapper .on-air-content {
+  color: black;
+  font-family: gothamlight;
+  font-size: 18px;
+}
+/* line 104, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-middle-header .on-air-data-wrapper .on-air-person-name {
+  color: #7f7f7f;
+}
+/* line 109, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header {
+  background-color: #ca2744;
+  position: relative;
+  z-index: 100;
+}
+/* line 114, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header .navbar-header {
+  position: relative;
+}
+/* line 117, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header .navbar-header .navbar-brand {
+  position: absolute;
+  left: -60px;
+  top: -115px;
+}
+/* line 122, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header .navbar-header .navbar-brand img {
+  height: 200px;
+  width: 250px;
+}
+/* line 128, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header .navbar-collapse {
+  margin-left: 210px;
+  position: relative;
+}
+/* line 133, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header .navbar-nav .nav-item {
+  color: white;
+  font-family: gothamlight;
+  font-size: 18px;
+  padding: 20px 35px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1200px) {
+  /* line 133, ../scss/partials/_header.scss */
+  .navbar-static-top .navbar-bottom-header .navbar-nav .nav-item {
+    padding: 20px 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* line 133, ../scss/partials/_header.scss */
+  .navbar-static-top .navbar-bottom-header .navbar-nav .nav-item {
+    font-size: 15px;
+  }
+}
+/* line 147, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header .navbar-nav .nav-item-image {
+  padding: 20px 10px;
+}
+/* line 150, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header .navbar-nav .nav-item-image img {
+  height: 20px;
+  vertical-align: top;
+}
+/* line 155, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header .navbar-nav .nav-item-wrapper {
+  position: static;
+}
+/* line 159, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header .navbar-nav .nav-item-wrapper:hover .nav-item, .navbar-static-top .navbar-bottom-header .navbar-nav .nav-item-wrapper.active .nav-item {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ca2744), color-stop(0%, #ca2744), color-stop(100%, #000000), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(#ca2744, #ca2744 0%, #000000 100%, #000000);
+  background-image: -moz-linear-gradient(#ca2744, #ca2744 0%, #000000 100%, #000000);
+  background-image: -o-linear-gradient(#ca2744, #ca2744 0%, #000000 100%, #000000);
+  background-image: linear-gradient(#ca2744, #ca2744 0%, #000000 100%, #000000);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFCA2744', endColorstr='#FF000000');
+}
+/* line 164, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header .navbar-nav .nav-item-wrapper:hover > .nav-item-dropdown-wrapper {
+  display: block;
+}
+/* line 169, ../scss/partials/_header.scss */
+.navbar-static-top .navbar-bottom-header .nav-item-dropdown-wrapper {
+  background: white;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 10px;
+}
+
+/* line 179, ../scss/partials/_header.scss */
+.navbar-sidebar {
+  background-color: #7f7f7f;
+  position: fixed;
+  padding-left: 30px;
+  width: 200px;
+  height: 100%;
+  right: -200px;
+  top: 0;
+  z-index: 1500;
+}
+/* line 189, ../scss/partials/_header.scss */
+.navbar-sidebar.navbar-sidebar-open {
+  display: block;
+  right: 0;
+}
+/* line 193, ../scss/partials/_header.scss */
+.navbar-sidebar .sidebar-brand {
+  color: white;
+}
+/* line 195, ../scss/partials/_header.scss */
+.navbar-sidebar .sidebar-brand:hover {
+  text-decoration: underline;
+}
+/* line 199, ../scss/partials/_header.scss */
+.navbar-sidebar .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  text-shadow: none;
+  z-index: 100;
+}
+/* line 208, ../scss/partials/_header.scss */
+.navbar-sidebar .close:hover {
+  color: white;
+}
+/* line 212, ../scss/partials/_header.scss */
+.navbar-sidebar h1 {
+  margin-left: 10px;
+  font-family: gothamlight;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 219, ../scss/partials/_header.scss */
+.navbar-sidebar .navbar-nav {
+  margin-top: 30px;
+}
+/* line 222, ../scss/partials/_header.scss */
+.navbar-sidebar .navbar-nav .nav-item-wrapper {
+  width: 100%;
+}
+/* line 225, ../scss/partials/_header.scss */
+.navbar-sidebar .navbar-nav .nav-item-wrapper .nav-item {
+  font-family: gothamlight;
+  text-align: left;
+  text-transform: uppercase;
+}
+/* line 231, ../scss/partials/_header.scss */
+.navbar-sidebar .navbar-nav .nav-item-wrapper .nav-item:hover {
+  background-color: inherit;
+  color: white;
+}
+
+/* line 1, ../scss/partials/_footer.scss */
+.footer-wrapper {
+  background-color: black;
+  margin-top: 80px;
+  padding: 30px 0;
+  position: relative;
+  z-index: 100;
+}
+/* line 9, ../scss/partials/_footer.scss */
+.footer-wrapper .footer-top-menu-wrapper .footer-top-menu {
+  margin: 0;
+  padding: 0;
+}
+/* line 13, ../scss/partials/_footer.scss */
+.footer-wrapper .footer-top-menu-wrapper .footer-top-menu-item {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 19, ../scss/partials/_footer.scss */
+.footer-wrapper .footer-top-menu-wrapper .footer-top-menu-item + .footer-top-menu-item {
+  margin-left: 30px;
+}
+/* line 23, ../scss/partials/_footer.scss */
+.footer-wrapper .footer-top-menu-wrapper .footer-top-menu-item-link {
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 28, ../scss/partials/_footer.scss */
+.footer-wrapper .footer-top-menu-wrapper .footer-scroll-top-wrapper {
+  cursor: pointer;
+}
+/* line 32, ../scss/partials/_footer.scss */
+.footer-wrapper .footer-bottom-menu-wrapper {
+  margin-top: 80px;
+  padding: 0;
+}
+/* line 36, ../scss/partials/_footer.scss */
+.footer-wrapper .footer-bottom-menu-wrapper .footer-bottom-menu {
+  margin: 0;
+  padding: 0;
+}
+/* line 40, ../scss/partials/_footer.scss */
+.footer-wrapper .footer-bottom-menu-wrapper .footer-bottom-menu-item {
+  cursor: default;
+  display: table;
+  float: left;
+  list-style: none;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+/* line 48, ../scss/partials/_footer.scss */
+.footer-wrapper .footer-bottom-menu-wrapper .footer-bottom-menu-item .footer-bottom-menu-item-text {
+  color: #7f7f7f;
+  display: table-cell;
+  font-size: 12px;
+  vertical-align: bottom;
+}
+/* line 54, ../scss/partials/_footer.scss */
+.footer-wrapper .footer-bottom-menu-wrapper .footer-bottom-menu-item .footer-bottom-menu-item-image {
+  display: table-cell;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+/* line 59, ../scss/partials/_footer.scss */
+.footer-wrapper .footer-bottom-menu-wrapper .footer-bottom-menu-item .footer-bottom-menu-item-image img {
+  width: 15px;
+}
+
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* line 2, ../scss/partials/_forms.scss */
+form .input-validation-error {
+  border-color: #ff5f5f !important;
+}
+/* line 5, ../scss/partials/_forms.scss */
+form .input-validation-error + .nano-validation-error {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* line 13, ../scss/partials/_forms.scss */
+.nano-validation-summary-errors ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 17, ../scss/partials/_forms.scss */
+.nano-validation-summary-errors ul li {
+  list-style: none;
+}
+
+/* line 23, ../scss/partials/_forms.scss */
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+/* line 27, ../scss/partials/_forms.scss */
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 999px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+/* line 4, ../scss/partials/_utilities.scss */
+.css3-shadow,
+.css3-gradient1,
+.css3-gradient2 {
+  position: relative;
+  -webkit-box-shadow: 0 0 0 rgba(127, 127, 127, 0.3);
+  box-shadow: 0 0 0 rgba(127, 127, 127, 0.3);
+}
+
+/* line 12, ../scss/partials/_utilities.scss */
+.css3-shadow.css3-shadow-light:after {
+  -webkit-box-shadow: rgba(127, 127, 127, 0.4) 0 0 50px;
+  -moz-box-shadow: rgba(127, 127, 127, 0.4) 0 0 50px;
+  box-shadow: rgba(127, 127, 127, 0.4) 0 0 50px;
+  bottom: 6px;
+}
+
+/*==================================================
+ * Drop shadow effect with box-shadow
+ * ===============================================*/
+/* line 23, ../scss/partials/_utilities.scss */
+.css3-shadow:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 50px rgba(127, 127, 127, 0.8);
+  box-shadow: 0 0 50px rgba(127, 127, 127, 0.8);
+  bottom: 0px;
+  width: 80%;
+  height: 50%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  left: 10%;
+  right: 10%;
+}
+
+/* line 39, ../scss/partials/_utilities.scss */
+.css3-shadow-right:after {
+  bottom: 10%;
+  top: 10%;
+  width: 10%;
+  height: 80%;
+  left: auto;
+  right: 2%;
+}
+
+/*==================================================
+ * Drop shadow effect with radial gradient
+ * ===============================================*/
+/* line 52, ../scss/partials/_utilities.scss */
+.css3-gradient1:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  bottom: 0;
+  width: 120%;
+  height: 50px;
+  left: -10%;
+  right: -10%;
+  background: -webkit-radial-gradient(50% -3%, ellipse cover, rgba(0, 0, 0, 0.5), rgba(97, 97, 97, 0) 40%);
+  background: radial-gradient(ellipse at 50% -3%, rgba(0, 0, 0, 0.5), rgba(97, 97, 97, 0) 40%);
+}
+
+/*==================================================
+ * Glow effect with box-shadow
+ * ===============================================*/
+/* line 69, ../scss/partials/_utilities.scss */
+.css3-gradient2:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  bottom: 0;
+  width: 120%;
+  height: 90px;
+  left: -10%;
+  right: -10%;
+  background: -webkit-radial-gradient(50% -3%, ellipse cover, rgba(96, 251, 202, 0.8), rgba(112, 220, 255, 0.5), rgba(255, 116, 225, 0) 50%), -webkit-radial-gradient(80% 10%, circle contain, rgba(96, 251, 202, 0.8), rgba(255, 255, 255, 0) 180%), -webkit-radial-gradient(90% 20%, circle contain, rgba(255, 255, 202, 0.8), rgba(255, 255, 255, 0) 60%);
+  background: radial-gradient(ellipse at 50% -3%, rgba(96, 251, 202, 0.8), rgba(112, 220, 255, 0.5), rgba(255, 116, 225, 0) 50%), radial-gradient(circle at 80% 10%, rgba(96, 251, 202, 0.8), rgba(255, 255, 255, 0) 2%), radial-gradient(circle at 90% 20%, rgba(255, 251, 202, 0.8), rgba(255, 255, 255, 0) 1%);
+}
+
+/* line 83, ../scss/partials/_utilities.scss */
+.navbar-sidebar {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  overflow-x: hidden;
+}
+
+/* line 92, ../scss/partials/_utilities.scss */
+.clear-overflow {
+  overflow: hidden;
+}
+
+/* line 96, ../scss/partials/_utilities.scss */
+.center-text {
+  text-align: center;
+}
+
+/* line 100, ../scss/partials/_utilities.scss */
+.center-element {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 105, ../scss/partials/_utilities.scss */
+.z-index-top {
+  z-index: 100;
+}
+
+/* line 1, ../scss/partials/components/_uploader.scss */
+.dropzone {
+  display: table;
+  margin-bottom: 0;
+  height: 210px;
+  width: 100%;
+}
+/* line 7, ../scss/partials/components/_uploader.scss */
+.dropzone.hover {
+  border-color: #5cb85c;
+}
+/* line 10, ../scss/partials/components/_uploader.scss */
+.dropzone .dropzone-control-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/********* PAGES *******/
+/* line 2, ../scss/pages/home/_home-index.scss */
+.content .dropzone {
+  border-style: dotted;
+  border-width: 3px;
+}

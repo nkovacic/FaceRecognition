@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content" ng-controller="CameraController" ng-file-drop>
+    <div class="row">
+        <div class="content-section col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Posnemi sliko z kamero</h3>
+                </div>
+                <div class="panel-body">
+                    <webcam on-stream="onStream(stream,video)" on-access-denied="onError(err)" on-streaming="onSuccess(video)" height="500" width="500">
+                        <div class="alert alert-error" ng-show="webcamError">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                        </div>
+                    </webcam>
+                </div>
+                <div class="panel-footer clearfix">
+                    <div class="pull-left">
+                        <button class="btn btn-danger" ng-click="onStopVideoClick()" type="button">Premor</button>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-success" ng-click="onTakeSnapshotClick()" type="button">Posnemi sliko</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-section col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Naloži sliko z diska</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="dropzone well well-sm" ng-file-over="hover">
+                        <div class="dropzone-control-wrapper">
+                            <div class="dropzone-control-section center-text">
+                                Povlecite in spustite datoteko sem
+                            </div>
+                            <div class="dropzone-control-section center-text">
+                                ali
+                            </div>
+                            <div class="dropzone-control-section">
+                                <span class="btn btn-default btn-file center-element">
+                                    <span class="btn-file-text">Izberite datoteke
+                                    </span>
+                                    <input class="file-upload-control" name="fileBase" ng-file-select type="file">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="content-section col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Predogled naložene slike</h3>
+                </div>
+                <div class="panel-body">
+                    <canvas class="face-detection-snapshot"></canvas>
+                </div>
+                <div class="panel-footer clearfix">
+                    <div class="pull-left">
+                        <button class="btn btn-primary" ng-click="onDetectFacesClick()" type="button">Najdi obraze na sliki</button>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-success" ng-click="onFaceRecognitionClick()" type="button">Razpoznaj obraze na sliki</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-section col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Obdelana slika</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="face-detection-result">
+                        <div class="face-detection-error ng-hide" ng-show="detectionError">
+                            <div class="alert alert-danger alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <strong>Oh snap!</strong>
+                                {{ detectionError.message }}
+                            </div>
+                        </div>
+                        <div class="face-detection-success ng-hide" ng-show="detectionSuccess">
+                            <div class="alert alert-success alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <strong>Success!</strong>
+                                {{ detectionSuccess.message }}
+                            </div>
+                        </div>
+                        <div class="face-detection-found ng-hide" ng-show="recognitionSuccess">
+                            <ul class="media-list">
+                                <li class="media" ng-repeat="personWithFace in personsWithFace">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">{{ personWithFace.personOnFace.firstName }} {{ personWithFace.personOnFace.lastName }}</h4>
+                                        <div>
+                                            X: {{ personWithFace.faceForPerson.x }}, Y: {{ personWithFace.faceForPerson.y }}
+                                        </div>
+                                        <div>
+                                            Širina: {{ personWithFace.faceForPerson.width }}, Višina: {{ personWithFace.faceForPerson.height }}
+                                        </div>
+                                        <div>
+                                            Eigenova dolžina: {{ personWithFace.eigenDistance}}
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <canvas class="face-detection-processed"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

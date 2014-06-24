@@ -1,0 +1,21 @@
+/*
+	This CSS was compiled using the Compass SASS framework (http://compass-style.org/).
+	To extend the scss files just just call "compass watch" in a command prompt window, which is pointing to the main project directory.
+	Compiled CSS file is saved in the css directory under the name main.css.
+	
+	For more information about the SASS language please visit http://sass-lang.com/
+*/
+
+/********* VENDOR *******/
+@import "vendor/all";
+
+
+/********* MODULES *******/
+@import "modules/all";
+
+/********* PARTIALS *******/
+@import "partials/all";
+
+/********* PAGES *******/
+@import "pages/all";
+

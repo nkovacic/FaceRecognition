@@ -1,0 +1,31 @@
+﻿@import "compass";
+
+$light: 100; 
+$regular: 400; 
+$bold: 600; 
+  
+// Base Font 
+$base-font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+$base-font-weight: $regular; 
+$base-font-size: 14px; 
+  
+$break-large: 1200px;
+$break-desktop: 992px;
+$break-tablet: 768px;
+$break-mobile: 450px;
+
+$base-color-background: white;
+$base-color-grey-medium: #7f7f7f;
+$base-color-grey-less-light: #c7c7c7;
+$base-color-grey-light: #f0f1f1;
+$base-color-grey-todo: #f3f5f9; 
+$base-color-red-light: #ee2c49;
+$base-color-burgundy: #ca2744;
+$base-color-orange: #f99d1c;
+
+$base-color-red-validation: #ff5f5f;
+
+$main-logo-width: 250px;
+$horizontal-column-padding: 10px;
+$container-padding: 40px;
+$container-inner-padding: 30px;

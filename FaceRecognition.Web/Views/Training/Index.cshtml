@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content" ng-controller="TrainingController" ng-file-drop>
+    <div class="row">
+        <div class="content-section col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Posnemi sliko z kamero</h3>
+                </div>
+                <div class="panel-body">
+                    <webcam on-stream="onStream(stream,video)" on-access-denied="onError(err)" on-streaming="onSuccess(video)" height="500" width="500">
+                        <div class="alert alert-error" ng-show="webcamError">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>Warning!</strong> WebCam not working
+                        </div>
+                    </webcam>
+                </div>
+                <div class="panel-footer clearfix">
+                    <div class="pull-left">
+                        <button class="btn btn-danger" ng-click="onStopVideoClick()" type="button">Premor</button>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-success" ng-click="onTakeSnapshotClick()" type="button">Posnemi sliko</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-section col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Naloži sliko z diska</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="dropzone well well-sm" ng-file-over="hover">
+                        <div class="dropzone-control-wrapper">
+                            <div class="dropzone-control-section center-text">
+                                Povlecite in spustite datoteko sem
+                            </div>
+                            <div class="dropzone-control-section center-text">
+                                ali
+                            </div>
+                            <div class="dropzone-control-section">
+                                <span class="btn btn-default btn-file center-element">
+                                    <span class="btn-file-text">
+                                        Izberite datoteke
+                                    </span>
+                                    <input class="file-upload-control" name="fileName" ng-file-select type="file">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="content-section col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Posneta slika</h3>
+                </div>
+                <div class="panel-body">
+                    <canvas class="face-detection-processed"></canvas>
+                </div>
+                <div class="panel-footer clearfix ng-hide" ng-show="showTrainingPanel">
+                    <form role="form">
+                        <div class="row clearfix">
+                            <div class="form-group col-sm-6">
+                                <input class="form-control" ng-model="person.firstName" placeholder="Vpišite ime" value="{{person.firstName}}" />
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <input class="form-control" ng-model="person.lastName" placeholder="Vpišite priimek" value="{{person.lastName}}" />
+                            </div>
+                            <div class="form-group col-sm-12 clearfix">
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-primary" ng-click="onEndTrainingClick()">Začni trening</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="content-section col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Obvestila</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="face-detection-error ng-hide" ng-show="trainingError">
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" aria-hidden="true">&times;</button>
+                            <strong>Oh snap!</strong>
+                            {{ trainingError.message }}
+                        </div>
+                    </div>
+                    <div class="face-detection-success ng-hide" ng-show="trainingSuccess">
+                        <div class="alert alert-success alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>Success!</strong>
+                            {{ trainingSuccess.message }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

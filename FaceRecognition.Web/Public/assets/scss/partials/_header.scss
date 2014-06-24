@@ -1,0 +1,238 @@
+.navbar-static-top {
+	background: none;
+	border: 0;
+	margin-bottom: 0;
+	z-index:auto;
+
+	.container {
+		padding-left: $container-padding;
+		padding-right: $container-padding;
+	}
+	.navbar-top-header {
+		background-color: black;
+		padding: 10px 0;
+		position: fixed;
+		z-index: 1001;
+		top:0;
+		width:100%;
+
+		.top-header-user-wrapper {
+			.top-header-user-username {
+				color: $base-color-grey-medium;
+				line-height: 25px;
+			}
+			.top-header-user-logout-wrapper {
+				margin-left: 10px;
+
+				.top-header-user-logout {
+					height: 25px;
+				}
+			}
+		}
+		.top-header-menu-wrapper {
+			.top-header-sidebar-button-wrapper {
+				display: table;
+				height: 25px;
+			}
+			.navbar-toggle {
+				border: 0;
+				border-radius: 0;
+				display: table-cell;
+				float: none;
+				margin: 0;
+				padding: 0;	
+				vertical-align: middle;
+
+				.icon-bar {
+					background-color: $base-color-grey-medium;
+					height: 3px;
+				}		
+			}
+			.top-header-menu-text {
+				color: $base-color-grey-medium;
+				margin-left: 20px;
+				line-height: 25px;
+			}
+		}
+	}
+	.navbar-middle-header {
+		position: relative;
+
+		.middle-star-image-wrapper {
+			position: absolute;
+			margin-top: -40px;
+
+			.middle-star-image {
+				@include opacity(0.25);
+				height: 340px;
+				width: 340px;
+			}
+		}
+		.middle-header-on-air-wrapper {
+			padding-right: 0;
+		}
+		.on-air-person-image-wrapper {
+			position: absolute;
+			bottom: 0;
+			right: 30px;
+		}
+		.on-air-data-wrapper {
+			background-color: $base-color-grey-light;
+			margin: 25px 0 20px 0;
+			padding: 10px 15px;
+
+			.on-air-live {
+				background-color: $base-color-burgundy;
+				color: white;
+				font-family: gothammedium;
+				height: 26px;
+				padding: 3px 5px;
+				text-transform: uppercase;
+			}
+			.on-air-volume-icon-wrapper {
+				margin-left: 15px;
+
+				img {
+					height: 26px;
+				}
+			}
+			.on-air-content {
+				color:black;
+				font-family: gothamlight;
+				font-size: 18px;
+			}
+			.on-air-person-name {
+				color: $base-color-grey-medium;
+			}
+		}
+	}
+	.navbar-bottom-header {
+		background-color: $base-color-burgundy;
+		position: relative;
+		z-index: 100;
+
+		.navbar-header {
+			position: relative;
+
+			.navbar-brand {
+				position: absolute;
+				left: -60px;
+				top: -($main-logo-width / 2) + 10px;
+
+				img {
+					height: $main-logo-width - 50px;
+					width: $main-logo-width;
+				}
+			}
+		}
+		.navbar-collapse {		
+			margin-left: $main-logo-width - 40px;
+			position: relative;
+		}
+		.navbar-nav {
+			.nav-item {
+				color: white;
+				font-family: gothamlight;
+				font-size: 18px;
+				padding: 20px 35px;
+				text-transform: uppercase;
+
+				@media screen and (max-width: $break-large){
+					padding: 20px 10px;
+				}
+				@media screen and (max-width: $break-desktop){
+					font-size: 15px;
+				}
+			}
+			.nav-item-image {
+				padding: 20px 10px;
+
+				img {
+					height: 20px;
+					vertical-align: top;	
+				}
+			}
+			.nav-item-wrapper {
+				position: static;
+
+				&:hover .nav-item,
+				&.active .nav-item {
+					@include background-image(linear-gradient($base-color-burgundy, $base-color-burgundy 0%, black 100%, black));
+					@include filter-gradient($base-color-burgundy, black);
+				}
+
+				&:hover > .nav-item-dropdown-wrapper {
+					display: block;
+				}				
+			}
+		}
+		.nav-item-dropdown-wrapper {
+			background: white;
+			display: none;
+			position: absolute;
+			left: 0;
+			right: 10px;
+		}
+	}
+}
+
+.navbar-sidebar {
+	background-color: $base-color-grey-medium;
+	position: fixed;
+	padding-left: 30px;
+	width: 200px;
+	height: 100%;
+	right: -200px;
+	top: 0;
+	z-index: 1500;
+
+	&.navbar-sidebar-open {
+		display: block;
+		right: 0;
+	}
+	.sidebar-brand {
+		color: white;
+		&:hover {		
+			text-decoration: underline;
+		}
+	}
+	.close {
+		//color: $base-light-grey-color;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		@include opacity(1);
+		text-shadow: none;
+		z-index: 100;
+
+		&:hover {
+			color: white;
+		}
+	}
+	h1 {
+		margin-left: 10px;
+		font-family: gothamlight;
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.navbar-nav {
+		margin-top: 30px;
+
+		.nav-item-wrapper {
+			width: 100%;
+
+			.nav-item {
+				//color: $base-lighter-grey-color;
+				font-family: gothamlight;
+				text-align: left;
+				text-transform: uppercase;
+
+				&:hover {
+					background-color: inherit;
+					color: white;
+				}
+			}
+		}
+	}
+}
